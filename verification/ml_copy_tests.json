@@ -1,0 +1,10 @@
+{
+  "date": "2026-09-29",
+  "command": "python -m pytest -q",
+  "cwd": "repository root",
+  "exit_status": 0,
+  "passed": 247,
+  "warnings": 15,
+  "seconds": 20.12,
+  "data": "Synthetic software fixtures only; no training data or final test used"
+}

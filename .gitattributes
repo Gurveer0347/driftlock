@@ -1,0 +1,7 @@
+* text=auto
+*.sh text eol=lf
+android/gradlew text eol=lf
+*.jar binary
+*.onnx binary
+*.npy binary
+*.apk binary

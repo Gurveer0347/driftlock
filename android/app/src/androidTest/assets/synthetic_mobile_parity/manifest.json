@@ -1,0 +1,85 @@
+{
+  "model_contract_version": "driftlock-ml-2.0-causal-latest",
+  "architecture": "cnn_gru",
+  "model_sha256": "b4c199d1571dcc1bc9f30aae11761d0e02272a715ad35a8048a460078e9a6782",
+  "review_status": "SOFTWARE_CHECK_ONLY",
+  "review_evidence": "Synthetic numerical check; no source or navigation approval.",
+  "source_type": "synthetic_software_check",
+  "input_name": "imu",
+  "output_name": "speed_sigma",
+  "window_samples": 20,
+  "sample_hz": 10.0,
+  "time_base": "seconds_since_boot",
+  "prediction_timestamp": "latest_sample",
+  "time_order": "oldest_to_newest",
+  "input_dtype": "float32",
+  "input_shape": [
+    1,
+    20,
+    6
+  ],
+  "output_shape": [
+    1,
+    2
+  ],
+  "channel_order": [
+    "ax",
+    "ay",
+    "az",
+    "gx",
+    "gy",
+    "gz"
+  ],
+  "frame": "phone",
+  "acceleration_includes_gravity": true,
+  "acceleration_unit": "m/s2",
+  "gyro_unit": "rad/s",
+  "speed_unit": "m/s",
+  "speed_semantics": "vehicle_forward_signed",
+  "output_order": [
+    "speed_mps",
+    "sigma_mps"
+  ],
+  "normalization": "embedded_in_model_do_not_normalize_twice",
+  "input_mean": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "input_std": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "recurrent_state": "reset_for_each_complete_window",
+  "uncertainty_calibrated": false,
+  "max_standardized_abs": 20.0,
+  "max_sigma_mps": 5.0,
+  "gating_threshold_status": "requires_validation_on_reviewed_data",
+  "checkpoint_sha256": "0a899fd6e887b2abeb9f58a734bb6c77d26bbbe4bdb49aeca62e033a24642323",
+  "golden_provenance": {
+    "source_type": "synthetic_software_check",
+    "data_time_base": "synthetic_boot_clock",
+    "purpose": "numerical_parity_only"
+  },
+  "safe_for_driver_guidance": false,
+  "android_parity_status": "NOT_TESTED",
+  "automatic_approval": false,
+  "config": {
+    "architecture": "cnn_gru",
+    "window_samples": 20,
+    "sample_hz": 10.0,
+    "channels": 32,
+    "hidden_size": 32,
+    "speed_scale": 10.0,
+    "sigma_floor_mps": 0.1,
+    "model_contract_version": "driftlock-ml-2.0-causal-latest",
+    "prediction_timestamp": "latest_sample"
+  }
+}

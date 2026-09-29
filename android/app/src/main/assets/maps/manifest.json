@@ -1,0 +1,19 @@
+{
+  "url": "https://api.openstreetmap.org/api/0.6/map?bbox=76.771,30.730,76.791,30.746",
+  "retrieved_utc": "2026-09-20T11:37:28.115226+00:00",
+  "http_status": 200,
+  "bytes": 2329732,
+  "sha256": "610c5e611d23f4ca0084d2e5957a9a9fcf5959d680c2e3597da22deb018cc1bb",
+  "bbox_wsen": [
+    76.771,
+    30.73,
+    76.791,
+    30.746
+  ],
+  "selection": "Chandigarh sample region around existing independent team map; NOT generated from any evaluator trajectory",
+  "attribution": "OpenStreetMap contributors",
+  "license": "ODbL",
+  "nodes": 5794,
+  "ways": 1604,
+  "relations": 123
+}

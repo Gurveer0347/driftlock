@@ -1,0 +1,25 @@
+{
+  "fixture_kind": "synthetic software parity only",
+  "source_hashes": {
+    "team_work/navigation/driftlock_nav/config.py": "dd7ae9d986f7f2b0bb4f2d906a6fe828fe61eed288283dad70399fcd668398a6",
+    "team_work/navigation/driftlock_nav/alignment.py": "6921424a1ceea1850ee67d1bf23475a46c934981fc3d49efb0014992534a6dbf",
+    "team_work/navigation/driftlock_nav/health.py": "913ddf4e2b65485e9319169555e7307b1b2d44205322b6e910c74db7ac16644e",
+    "team_work/navigation/driftlock_nav/simulate.py": "5789127d126588bc414b9f072444e89aeaa9fcec14105877b2ac639d71ded56f",
+    "team_work/navigation/driftlock_nav/__init__.py": "842b73f8039b92a34c629aa307556f726f1fd12018fd4acbb26dc28fca500aa2",
+    "team_work/navigation/driftlock_nav/types.py": "b20a52376e690a7175d5c6b3beff4546903130e72f460656635c06c21c2d6f37",
+    "team_work/navigation/driftlock_nav/rotations.py": "ff1f6bea5a9fa21a13b6b970c1f012bf975390dec88d179c99ad678c47a4d8e7",
+    "team_work/navigation/driftlock_nav/engine.py": "1bb4c37c61a4cd863302ea3810caadcab00dbd3e6397aac6a8071055c9a93c63",
+    "team_work/navigation/driftlock_nav/replay.py": "bba37dabd8f1a1a236e0eb29c47932ffc54b03e97bdf28e9454a328bff9dd553",
+    "team_work/navigation/driftlock_nav/shadowdr.py": "f3dab6736fba678cd7fff4d253d2120a2896371e3f7b7d952c54546eebd55488",
+    "team_work/navigation/driftlock_nav/filter.py": "9ff1f92a2f0576dbf0d7adfed2e5904cf2c78e05cacf1d7894f86b43614aa4fb",
+    "team_work/navigation/driftlock_nav/state.py": "8d10b181f43d66656ae70784348992bf1f7b652c98b70b0f102258b661faed88",
+    "team_work/navigation/driftlock_nav/validation.py": "116f03e26ea3b0d29a583364a37eb1eb08067feebb7a9c6a243e933d99e15d81"
+  },
+  "fixture_hashes": {
+    "stationary2.properties": "49543ed6eb3133bb6cb2804b33c913e1f9703aea13e016a4ee4f6a1ee874d830",
+    "stationary0.properties": "666f9679efa38a50abf00d7f2683e9ea419bb391b8a666175d22334a8270dbb5",
+    "maneuver.csv": "454f44bd7c8115d94cd09095a2b778581f5fe330397b314b14aa270941a9f45c",
+    "stationary1.properties": "f53a29d05174a5ac4743ece45615a19559e55a8beaa60b61db3b5a8adde61dac",
+    "mixed.properties": "349ebbb0037d8462a76eefe6c0c2394c627ef21261910307899d95fc0e5ea026"
+  }
+}

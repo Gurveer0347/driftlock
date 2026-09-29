@@ -1,0 +1,67 @@
+{
+  "purpose": "UNTRAINED_SYNTHETIC_NUMERICAL_PARITY_ONLY",
+  "production_approved": false,
+  "input_shape": [
+    4,
+    20,
+    6
+  ],
+  "output_shape": [
+    4,
+    2
+  ],
+  "absolute_tolerance": 2e-05,
+  "relative_tolerance": 2e-05,
+  "source_bundle": "runs/mobile_software_20260920_01/cnn_gru/onnx",
+  "desktop_parity": {
+    "purpose": "synthetic_software_check",
+    "source_type": "synthetic_software_check",
+    "onnx_invocations": 29,
+    "parity_invocations": 4,
+    "warmup_invocations": 5,
+    "latency_invocations": 20,
+    "max_absolute_error": 4.172325134277344e-07,
+    "desktop_cpu_latency_median_ms": 0.06345800284179859,
+    "desktop_cpu_latency_p95_ms": 0.06467710445576813,
+    "model_bytes": 139627,
+    "parameters": 11778,
+    "android_device_measurement": false,
+    "onnx": "1.20.1",
+    "onnxruntime": "1.22.0",
+    "environment": {
+      "python": "3.12.14",
+      "platform": "macOS-27.0-arm64-arm-64bit",
+      "architecture": "arm64",
+      "torch": "2.14.0",
+      "numpy": "2.5.3",
+      "mps_available": true,
+      "cuda_available": false
+    },
+    "command": [
+      "/Users/gurveersingh/DRIFTLOCK_ML_Codex/driftlock_ml/mobile.py",
+      "--software-check",
+      "--architecture",
+      "cnn_gru",
+      "--out",
+      "runs/mobile_software_20260920_01/cnn_gru"
+    ],
+    "source_sha256": "d8a29d2ea033db27415a2b94527c84908142a89190cc8ef6924a497df61c4300",
+    "config": {
+      "architecture": "cnn_gru",
+      "window_samples": 20,
+      "sample_hz": 10.0,
+      "channels": 32,
+      "hidden_size": 32,
+      "speed_scale": 10.0,
+      "sigma_floor_mps": 0.1,
+      "model_contract_version": "driftlock-ml-2.0-causal-latest",
+      "prediction_timestamp": "latest_sample"
+    }
+  },
+  "hashes": {
+    "outputs.bin": "c21f9340c85d99140c56c61d2138bf85627c849f9c9471b2eb00b798c0d7385c",
+    "inputs.bin": "0001796ac39a752ed81622c57cf3850b6e0632bb80dfd3f3de6d37d6d9df955c",
+    "model.onnx": "b4c199d1571dcc1bc9f30aae11761d0e02272a715ad35a8048a460078e9a6782",
+    "manifest.json": "46e8f560eb2babd758ea04a824a2af31663019b36b504d3ee99c3e713ec37a7b"
+  }
+}

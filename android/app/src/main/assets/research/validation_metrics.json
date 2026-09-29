@@ -1,0 +1,130 @@
+{
+  "research_contract": "driftlock-iovnbd-recorded-reference-v1",
+  "warning": "EXPLORATORY: agreement with unchanged recorded GPS SPEED numbers only. Physical speed units, native phone frame, fix freshness and direction remain unverified. Not verified vehicle speed, navigation drift, SIH accuracy or Android readiness.",
+  "split": "val",
+  "final_test_evaluated": false,
+  "checkpoint_sha256": "3bb73870b641edf623babdafdda96205874a74b09d05f2ab2c1fdd32f0b68df2",
+  "manifest_sha256": "a67e8cf4924ed3795a577129fa135b50ec1a01ab17496ebb7b6d62475df32169",
+  "architecture_config": {
+    "sample_hz": 10.0,
+    "window_samples": 40,
+    "train_stride": 10,
+    "eval_stride": 1,
+    "conv_channels": 32,
+    "hidden_size": 32,
+    "speed_scale": 10.0,
+    "sigma_floor_mps": 0.1,
+    "batch_size": 128,
+    "epochs": 30,
+    "warmup_epochs": 3,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "gradient_clip": 1.0,
+    "patience": 7,
+    "seed": 42,
+    "frame": "phone",
+    "acceleration_includes_gravity": true,
+    "conventions_version": "1.1",
+    "model_contract_version": "driftlock-ml-1.1-centre-forward",
+    "prediction_timestamp": "window_centre",
+    "speed_semantics": "vehicle_forward_signed",
+    "time_base": "seconds_since_boot"
+  },
+  "uncertainty_calibrated": true,
+  "all_windows": {
+    "n": 78931,
+    "rmse_reference_units": 4.886360097200595,
+    "mae_reference_units": 3.855450875460486,
+    "bias_reference_units": -2.274372986851941,
+    "p95_absolute_error_reference_units": 10.074346542358398,
+    "mean_sigma_reference_units": 4.968574275206973,
+    "coverage_95pct": 0.979260366649352,
+    "gaussian_nll": 2.91684740581042
+  },
+  "by_drive": {
+    "S-Vfa01": {
+      "n": 11447,
+      "rmse_reference_units": 4.935418539430403,
+      "mae_reference_units": 3.793905225869213,
+      "bias_reference_units": -0.16876589871290168,
+      "p95_absolute_error_reference_units": 10.570351004600525,
+      "mean_sigma_reference_units": 5.860470513126116,
+      "coverage_95pct": 0.9818293002533415,
+      "gaussian_nll": 3.0101629494523734
+    },
+    "S-Vfa02": {
+      "n": 67484,
+      "rmse_reference_units": 4.87798959650022,
+      "mae_reference_units": 3.865890580440501,
+      "bias_reference_units": -2.6315374160192633,
+      "p95_absolute_error_reference_units": 9.924018430709834,
+      "mean_sigma_reference_units": 4.817286025615064,
+      "coverage_95pct": 0.9788246102779918,
+      "gaussian_nll": 2.9010187200764768
+    }
+  },
+  "train_mean_baseline": {
+    "n": 78931,
+    "rmse_reference_units": 12.368349062028587,
+    "mae_reference_units": 11.57179714945469,
+    "bias_reference_units": -10.09526531601905,
+    "p95_absolute_error_reference_units": 16.684034656710782
+  },
+  "data_time_base": "seconds_since_recording_start",
+  "valid_for_navigation": false,
+  "comparison_meaning": "Agreement with exported held GPS values; overlapping errors correlated; no true GPS-blackout or navigation claim.",
+  "road_types": "No reviewed road-type labels; no road-type performance assertion.",
+  "behaviour_proxies": {
+    "near_zero_recorded_label": {
+      "n": 1615,
+      "rmse_reference_units": 3.7876262397524885,
+      "mae_reference_units": 2.5148231002291657,
+      "bias_reference_units": 2.5148231002291657,
+      "p95_absolute_error_reference_units": 9.656434360705314,
+      "mean_sigma_reference_units": 2.998872038159208,
+      "coverage_95pct": 0.9869969040247678,
+      "gaussian_nll": 2.2850926197937884
+    },
+    "increasing_recorded_label": {
+      "n": 424,
+      "rmse_reference_units": 4.937202052217509,
+      "mae_reference_units": 3.9622583957213275,
+      "bias_reference_units": -2.6090777297064944,
+      "p95_absolute_error_reference_units": 10.176459884643542,
+      "mean_sigma_reference_units": 5.072295547093985,
+      "coverage_95pct": 0.9834905660377359,
+      "gaussian_nll": 2.930921847681653
+    },
+    "decreasing_recorded_label": {
+      "n": 410,
+      "rmse_reference_units": 4.816300425130067,
+      "mae_reference_units": 3.7305566379209845,
+      "bias_reference_units": -1.7880962780336054,
+      "p95_absolute_error_reference_units": 10.354993557929992,
+      "mean_sigma_reference_units": 4.972145586479001,
+      "coverage_95pct": 0.9829268292682927,
+      "gaussian_nll": 2.871826183623449
+    },
+    "angular_motion_proxy": {
+      "n": 75720,
+      "rmse_reference_units": 4.907480003958897,
+      "mae_reference_units": 3.888949842928484,
+      "bias_reference_units": -2.3202857068522373,
+      "p95_absolute_error_reference_units": 10.056908798217775,
+      "mean_sigma_reference_units": 5.031219975569232,
+      "coverage_95pct": 0.9822768092974116,
+      "gaussian_nll": 2.9178897118170353
+    }
+  },
+  "proxy_definition": "Near-zero abs(raw reference)<=0.5; changes >0.5 or <-0.5 recorded units/s over consecutive <=0.15s rows; angular mean raw gyro norm>0.1. These are not authenticated driving maneuvers.",
+  "held_reference_baselines": {
+    "cnn_gru_delayed_centre": {
+      "cases": 389,
+      "mean_case_rmse_reference_units": 4.4716987502914565
+    },
+    "hold_last_recorded_pre_cut": {
+      "cases": 389,
+      "mean_case_rmse_reference_units": 2.302952869382203
+    }
+  }
+}
