@@ -16,9 +16,9 @@
 __pycache__/
 *.py[cod]
 .pytest_cache/
-data/
-runs/
-logs/
+/data/
+/runs/
+/logs/
 *.pt
 *.pth
 *.tflite
