@@ -1,0 +1,4 @@
+# Install in a SEPARATE Linux environment. Let the converter resolve its torch version.
+litert-torch
+ai-edge-litert
+numpy

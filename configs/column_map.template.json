@@ -1,0 +1,30 @@
+{
+  "comment": "Copy this JSON. Replace exact headers and UNREVIEWED evidence from source documentation and review. Never invent boot origin or signed velocity from unsigned GPS speed.",
+  "conventions_version": "1.1",
+  "model_contract_version": "driftlock-ml-1.1-centre-forward",
+  "prediction_timestamp": "window_centre",
+  "speed_semantics": "vehicle_forward_signed",
+  "time_base": "seconds_since_boot",
+  "label_semantics": "UNREVIEWED",
+  "label_semantics_evidence": "UNREVIEWED",
+  "time_base_evidence": "UNREVIEWED",
+  "columns": {
+    "timestamp_s": "REPLACE_WITH_VERIFIED_BOOT_CLOCK_HEADER",
+    "ax": "REPLACE_WITH_ACCELEROMETER_X_HEADER",
+    "ay": "REPLACE_WITH_ACCELEROMETER_Y_HEADER",
+    "az": "REPLACE_WITH_ACCELEROMETER_Z_HEADER",
+    "gx": "REPLACE_WITH_GYRO_X_HEADER",
+    "gy": "REPLACE_WITH_GYRO_Y_HEADER",
+    "gz": "REPLACE_WITH_GYRO_Z_HEADER",
+    "speed_mps": "REPLACE_WITH_SIGNED_VEHICLE_X_OR_VERIFIED_FORWARD_ONLY_SPEED_HEADER",
+    "label_valid": "REPLACE_WITH_TEAM_REVIEWED_0_OR_1_VALIDITY_HEADER"
+  },
+  "time_unit": "UNREVIEWED",
+  "acceleration_unit": "UNREVIEWED",
+  "gyro_unit": "UNREVIEWED",
+  "speed_unit": "UNREVIEWED",
+  "frame": "phone",
+  "acceleration_includes_gravity": true,
+  "separator": null,
+  "skiprows": 0
+}
